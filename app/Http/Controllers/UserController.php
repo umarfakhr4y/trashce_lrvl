@@ -54,11 +54,12 @@ class UserController extends Controller
     {
         $input['nik_user'] = $request->nik_user;
         $input['full_name'] = $request->full_name;
-        $input['address'] = $request->address;
-        $input['phone_number'] = $request->phone_number;
         $input['email'] = $request->email;
+        $input['phone_number'] = $request->phone_number;
+        $input['address'] = $request->address;
         $input['password'] = $request->password;
         $input['role'] = $request->role;
+        
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
         if ($input['role'] == 'admin') {
@@ -111,16 +112,18 @@ class UserController extends Controller
         }
 
         $validatedData = $request->validate([
+            'nik_user' => 'required',
             'full_name' => 'required',
+            'address' => 'required',
             'phone_number' => 'required',
             'email' => 'required|email',
-            'address' => 'required',
         ]);
 
+        $user->nik_user = $validatedData['nik_user'];
         $user->full_name = $validatedData['full_name'];
+        $user->address = $validatedData['address'];
         $user->phone_number = $validatedData['phone_number'];
         $user->email = $validatedData['email'];
-        $user->address = $validatedData['address'];
 
         if ($user->save()) {
             return response()->json([
