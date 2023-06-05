@@ -15,7 +15,7 @@ class PembayaranUserSeeder extends Seeder
     {
         PembayaranUser::create([
             'status' => 'Berhasil',
-            'pembayaran_bulan' => 'Juni',
+            'pembayaran_bulan' => 'April',
             'users_id' => '2',
         ]);
         PembayaranUser::create([
@@ -25,12 +25,15 @@ class PembayaranUserSeeder extends Seeder
         ]);
         PembayaranUser::create([
             'status' => 'Berhasil',
-            'pembayaran_bulan' => 'April',
+            'pembayaran_bulan' => 'Juni',
             'users_id' => '2',
         ]);
+        
+        
+        
         PembayaranUser::create([
             'status' => 'Berhasil',
-            'pembayaran_bulan' => 'Juni',
+            'pembayaran_bulan' => 'April',
             'users_id' => '3',
         ]);
         PembayaranUser::create([
@@ -40,8 +43,9 @@ class PembayaranUserSeeder extends Seeder
         ]);
         PembayaranUser::create([
             'status' => 'Berhasil',
-            'pembayaran_bulan' => 'April',
+            'pembayaran_bulan' => 'Juni',
             'users_id' => '3',
         ]);
+        
     }
 }

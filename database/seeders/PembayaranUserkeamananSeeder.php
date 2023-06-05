@@ -13,31 +13,35 @@ class PembayaranUserkeamananSeeder extends Seeder
      */
     public function run(): void
     {
-        
-        PembayaranUserKeamanan::create([
-            'status' => 'Berhasil',
-            'pembayaran_bulan' => 'Mei',
-            'users_id' => '2',
-        ]);
+
         PembayaranUserKeamanan::create([
             'status' => 'Berhasil',
             'pembayaran_bulan' => 'April',
             'users_id' => '2',
         ]);
+        PembayaranUserKeamanan::create([
+            'status' => 'Berhasil',
+            'pembayaran_bulan' => 'Mei',
+            'users_id' => '2',
+        ]);
+        
+        PembayaranUserKeamanan::create([
+            'status' => 'Berhasil',
+            'pembayaran_bulan' => 'April',
+            'users_id' => '3',
+        ]);
+        PembayaranUserKeamanan::create([
+            'status' => 'Berhasil',
+            'pembayaran_bulan' => 'Mei',
+            'users_id' => '3',
+        ]);
+        
         PembayaranUserKeamanan::create([
             'status' => 'Berhasil',
             'pembayaran_bulan' => 'Juni',
             'users_id' => '3',
         ]);
-        PembayaranUserKeamanan::create([
-            'status' => 'Berhasil',
-            'pembayaran_bulan' => 'Mei',
-            'users_id' => '3',
-        ]);
-        PembayaranUserKeamanan::create([
-            'status' => 'Berhasil',
-            'pembayaran_bulan' => 'April',
-            'users_id' => '3',
-        ]);
+
+
     }
 }
